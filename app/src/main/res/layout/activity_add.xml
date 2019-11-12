@@ -6,108 +6,121 @@
     android:layout_height="match_parent"
     tools:context=".AddActivity">
 
-    <EditText
-        android:id="@+id/edtNombreEvento"
-        android:layout_width="411dp"
-        android:layout_height="38dp"
-        android:hint="Ingrese nombre del evento"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="7dp" />
-
-    <EditText
-        android:id="@+id/edtUbicacion"
-        android:layout_width="415dp"
-        android:layout_height="45dp"
-        android:layout_below="@+id/edtNombreEvento"
-        android:hint="Ingrese ubicacion"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="45dp" />
-
-    <TextView
-        android:id="@+id/ltvDesde"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_below="@+id/edtUbicacion"
-        android:text="Desde"
-        tools:ignore="UnknownId"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="101dp" />
-
-    <EditText
-        android:id="@+id/edtFecha"
-        android:layout_width="408dp"
-        android:layout_height="59dp"
-        android:layout_below="@+id/edtUbicacion"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="UnknownId"
-        tools:layout_editor_absoluteY="140dp" />
-
-    <EditText
-        android:id="@+id/edtHoraInicio"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="90dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/ltvHasta"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_below="@+id/edtHoraInicio"
-        android:text="Hasta"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="210dp" />
+        <EditText
+            android:id="@+id/edtNombreEvento"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese nombre de la cita"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="7dp" />
 
-    <EditText
-        android:id="@+id/edtFechaHasta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ltvHasta"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395" />
+        <EditText
+            android:id="@+id/edtUbicacion"
+            android:layout_width="415dp"
+            android:layout_height="45dp"
+            android:hint="Ingrese ubicacion"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="45dp"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/edtHoraHasta"
-        android:layout_width="408dp"
-        android:layout_height="54dp"
-        android:layout_below="@+id/edtFechaHasta"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.31" />
+        <TextView
+            android:id="@+id/ltvDesde"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:text="Desde"
+            tools:ignore="MissingConstraints,UnknownId"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="101dp" />
 
-    <EditText
-        android:id="@+id/edtDescripcion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edtHoraHasta"
-        android:hint="Descripcion"
-        tools:layout_editor_absoluteX="-46dp"
-        tools:layout_editor_absoluteY="433dp" />
+        <EditText
+            android:id="@+id/edtFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints,UnknownId"
+            tools:layout_editor_absoluteY="140dp" />
 
-    <Button
-        android:id="@+id/btnGuardar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edtDescripcion"
-        android:layout_marginStart="80dp"
-        android:text="Guardar"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="530dp" />
+        <EditText
+            android:id="@+id/edtHoraInicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="90dp"
+            tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/btnCancelar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="236dp"
-        android:text="Cancelar"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="530dp" />
+        <TextView
+            android:id="@+id/ltvHasta"
+            android:layout_width="74dp"
+            android:layout_height="wrap_content"
+            android:text="Hasta"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="3dp"
+            tools:layout_editor_absoluteY="210dp" />
+
+        <EditText
+            android:id="@+id/edtFechaHasta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.395" />
+
+        <EditText
+            android:id="@+id/edtHoraHasta"
+            android:layout_width="408dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.31" />
+
+        <EditText
+            android:id="@+id/edtDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:hint="Descripcion"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="-46dp"
+            tools:layout_editor_absoluteY="433dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="189dp"
+                android:layout_height="wrap_content"
+                android:background="#2196F3"
+                android:text="Guardar"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:background="#2196F3"
+                android:text="Cancelar"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
